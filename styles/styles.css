@@ -50,25 +50,35 @@ nav {
 
 /* Hero Section */
 .hero {
-  background-image: url('/images/pexels-chich-choe-design-328303649-13813465.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  height: 100vh; 
+  position: relative;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 0 2rem;
   margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 700px;
   background: rgba(0, 0, 0, 0.5); 
   padding: 2rem;
   border-radius: 10px;
+  color: white;
 }
 
 .hero h2 {
