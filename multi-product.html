@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Château Solace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Playfair+Display:wght@400;700&family=Tangerine:wght@700&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="./styles/multi-product.css">
+  
+</head>
+<body>
+  <header>
+    <h1 class="logo">Château Solace</h1>
+    <nav>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="nav-links">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#services" class="nav-link">Services</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+        <a href="../index.html#location" class="nav-link">Location</a>
+      </div>
+    </nav>
+  </header>
+  
+  <section class="rooms">
+    <section id="room1" class="room">
+      <div class="image-gallery">
+        <div class="main-image">
+          <img src="images/pexels-heyho-6394517.jpg" class="current-image" alt="guesthouse-main">
+        </div>
+        <div class="thumbnails">
+          <img src="images/pexels-heyho-6394517.jpg" class="thumb active" onclick="changeImage(this)" alt="thumb1">
+          <img src="images/pexels-heyho-7018825.jpg" class="thumb" onclick="changeImage(this)" alt="thumb2">
+          <img src="images/pexels-heyho-6538903.jpg" class="thumb" onclick="changeImage(this)" alt="thumb3">
+        </div>
+      </div>
+      <div class="para">
+        <h1>Modern Luxury Stay</h1>
+        <p>Relax in a stylish suite featuring a cozy designer bedroom, a spa-style marble bathroom, and a sleek kitchen with premium appliances.<br>Perfect for a high-end getaway or business trip.</p>
+        <h2>R 10, 500.<br>For 2 Knights</h2>
+        <button class="cta-button">Book Now!</button>
+      </div>
+    </section>
+
+    <section id="room2" class="room">
+      <div class="image-gallery">
+        <div class="main-image">
+          <img src="images/pexels-heyho-6394517.jpg" class="current-image" alt="loft-main">
+        </div>
+        <div class="thumbnails">
+          <img src="images/pexels-heyho-6394517.jpg" class="thumb active" onclick="changeImage(this)" alt="thumb1">
+          <img src="images/pexels-heyho-6538901.jpg" class="thumb" onclick="changeImage(this)" alt="thumb2">
+          <img src="images/pexels-heyho-6538903.jpg" class="thumb" onclick="changeImage(this)" alt="thumb3">
+        </div>
+      </div>
+      <div class="para">
+        <h1>Chic Urban Loft</h1>
+        <p>Unwind in a spacious, light-filled loft with floor-to-ceiling windows, an industrial-inspired bedroom, and a contemporary bathroom. Ideal for extended stays or remote work getaways.</p>
+        <h2>R 14, 700.<br>For 2 Knights</h2>
+        <button class="cta-button">Book Now!</button>
+      </div>
+    </section>
+
+    <section id="room3" class="room">
+      <div class="image-gallery">
+        <div class="main-image">
+          <img src="images/pexels-heyho-6538903.jpg" class="current-image" alt="garden-suite-main">
+        </div>
+        <div class="thumbnails">
+          <img src="images/pexels-heyho-6903153.jpg" class="thumb active" onclick="changeImage(this)" alt="thumb1">
+          <img src="images/pexels-curtis-adams-1694007-10827340.jpg" class="thumb" onclick="changeImage(this)" alt="thumb2">
+          <img src="images/pexels-heyho-6538903.jpg" class="thumb" onclick="changeImage(this)" alt="thumb3">
+        </div>
+      </div>
+      <div class="para">
+        <h1>Serene Garden Suite</h1>
+        <p>Escape to tranquility in this elegant suite beside a private garden. Enjoy a sunlit bedroom, a deep soaking tub, and a cozy lounge area. Perfect for a romantic retreat.</p>
+        <h2>R 20, 000.<br>For 2 Knights</h2>
+        <button class="cta-button">Book Now!</button>
+      </div>
+    </section>
+  </section>
+
+  <script>
+    function changeImage(thumbnail) {
+      const gallery = thumbnail.closest('.image-gallery');
+      const mainImage = gallery.querySelector('.current-image');
+      const allThumbs = gallery.querySelectorAll('.thumb');
+
+      mainImage.src = thumbnail.src;
+      allThumbs.forEach(t => t.classList.remove('active'));
+      thumbnail.classList.add('active');
+    }
+  </script>
+</body>
+</html>
